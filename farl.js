@@ -64,6 +64,8 @@ function onRequestCompleted() {
         };
     }
 
+    setIcon(undefined);
+
     glyphField.oninput = () => {
         if (glyphField.value.length >= 1) {
             const charCode = glyphField.value.toUpperCase().charCodeAt(0);
