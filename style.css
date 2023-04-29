@@ -1,0 +1,132 @@
+:root {
+    --font-family: "Courier New", Courier, monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+
+    font-family: var(--font-family);
+    background-color: ivory;
+    text-align: center;
+}
+
+button, input {
+    font-family: inherit;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    min-height: 100%;
+    gap: 15px;
+    margin: 15px;
+}
+
+#container.loading {
+    visibility: hidden;
+}
+
+#container.loading::before {
+    visibility: visible;
+    content: "Loading...";
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#character {
+    font-size: min(90vmin, 150px);
+    font-family: var(--fa-style-family-classic), var(--fa-style-family-brands), var(--font-family);
+    width: 1em;
+    height: 1em;
+    padding: 8px;
+    border: solid black 3px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#unicode, .name-container, #name-clickable, #name-unclickable {
+    font-size: min(75vmin, 50px);
+    min-height: 1lh;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+#unicode {
+    width: 4ch;
+    border: solid black 3px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 4px;
+}
+
+.name-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#name-clickable:hover {
+    text-decoration: underline;
+}
+
+#name-clickable[href=""] {
+    display: none;
+}
+
+#name-unclickable {
+    display: none;
+}
+
+#name-clickable[href=""]~#name-unclickable {
+    display: inline;
+}
+
+.copy-button {
+    background: none;
+    border: none;
+    font-size: 75%;
+    cursor: pointer;
+    position: relative;
+}
+
+#name-clickable[href=""] ~ .copy-button {
+    display: none;
+}
+
+#copy-confirmation {
+    font-size: 1rem;
+    position: absolute;
+    top: 0.5em;
+    padding-left: 10px;
+    opacity: 0;
+}
+
+#pro-only {
+    visibility: hidden;
+}
+
+#pro-only.show {
+    visibility: visible;
+}
+
+footer {
+    margin-top: 30px;
+}

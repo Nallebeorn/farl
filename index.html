@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://kit.fontawesome.com/12bd201987.js" crossorigin="anonymous"></script>
+        <title>F.A.R.L &ndash; Font Awesome Reverse Lookup</title>
+    </head>
+
+    <body>
+        <div id="container" class="loading">
+            <h1>F.A.R.L</h1>
+            <h2>Font Awesome Reverse Lookup</h2>
+            <span>Find a Font Awesome icon by pasting the glyph or Unicode charcode</span>
+            <input class="fas" type="text" id="character" maxlength="1" autofocus placeholder="&#xf2b4;" aria-label="Glyph" title="Glyph">
+            <input type="text" id="unicode" placeholder="f2b4" aria-label="Unicode" title="Unicode"></output>
+            <output class="name-container">
+                <a id="name-clickable" href="" target="_blank"></a>
+                <span id="name-unclickable"></span>
+                <button class="copy-button" onclick="copyName();" aria-label="Copy" title="Copy">
+                    <i class="fas fa-copy" aria-hidden="true"></i>
+                    <span id="copy-confirmation">Copied!</span>
+                </button>
+            </output>
+            <span id="pro-only"><i class="fas fa-triangle-exclamation"></i>Pro only</span>
+            <footer>
+                Font Awesome v<span id="version-info"></span>
+            </footer>
+        </div>
+    </body>
+
+    <script src="./farl.js"></script>
+</html>
