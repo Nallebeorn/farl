@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 
     font-family: var(--font-family);
     background-color: ivory;
@@ -25,7 +25,8 @@ button, input {
     max-width: 100%;
     min-height: 100%;
     gap: 15px;
-    margin: 15px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 #container.loading {
