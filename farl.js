@@ -99,7 +99,7 @@ function onRequestCompleted() {
             glyphField.onpaste(event);
         } else {
             const asUnicode = extractUnicodeDigits(pasted);
-            if (asUnicode?.length >= 2) {
+            if (asUnicode?.length >= 2 && !pasted.startsWith("fa-")) {
                 unicodeField.onpaste(event);
             }
         }
